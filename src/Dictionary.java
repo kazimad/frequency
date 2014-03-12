@@ -16,13 +16,14 @@ public class Dictionary  {
 
         String num;
 
-        HashSet<Integer> SetOfInt = new HashSet<Integer>();
+        HashSet<Long> SetOfInt = new HashSet<Long>();
         BufferedReader br = new BufferedReader(new FileReader("pass.txt"));
         while ((num = br.readLine()) !=null){
+
             StringTokenizer stnum = new StringTokenizer(num);
             while (stnum.hasMoreTokens()){
                 String token = stnum.nextToken();
-                Integer  q = Integer.parseInt(token);
+                long  q = Long.parseLong(token);
                 SetOfInt.add(q);
             }
 
